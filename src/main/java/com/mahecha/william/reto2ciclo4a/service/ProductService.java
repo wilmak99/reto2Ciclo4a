@@ -29,10 +29,9 @@ public class ProductService {
     }
 
     public Products update(Products product) {
-
         if (product.getReference() != null) {
             Optional<Products> productDb = productsRepository.getProducts(product.getReference());
-            if (!productDb.isEmpty()) {
+            if (productDb.isPresent()) {
                 if (product.getCategory() != null) {
                     productDb.get().setCategory(product.getCategory());
                 }

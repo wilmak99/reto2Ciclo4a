@@ -4,10 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.annotation.Id;
 
-import javax.persistence.Id;
-
-@Document(collection = "chocolate")
+@Document(collection = "products")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
